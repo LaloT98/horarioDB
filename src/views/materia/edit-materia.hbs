@@ -1,0 +1,43 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar</h3>
+        </div>
+        <div class="card-body">
+            <form action="/schedule/edit-materia/{{MATERIA._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+
+                <div class="form-group">
+                    <input type="text" style="text-transform: uppercase;" name="Mname" class="form-control" placeholder="Total de estudiantes"
+                        value="{{MATERIA.Mname}}">
+                </div>
+
+                {{!-- <div class="form-group">
+                    <input type="number" name="Mtotal" class="form-control" placeholder="Total de estudiantes"
+                        value="{{MATERIA.Mtotal}}">
+                </div> --}}
+
+                <div class="form-group">
+                    <input type="number" name="MidealHours" class="form-control" placeholder="Total de estudiantes"
+                        value="{{MATERIA.MidealHours}}">
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="MmaxTimeDay" class="form-control" placeholder="Total de estudiantes"
+                        value="{{MATERIA.MmaxTimeDay}}">
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="MHoursWeek" class="form-control" placeholder="Total de estudiantes"
+                        value="{{MATERIA.MHoursWeek}}">
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar Cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

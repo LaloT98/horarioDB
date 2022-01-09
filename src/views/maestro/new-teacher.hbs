@@ -1,0 +1,36 @@
+<div class="col-md-6 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Datos de los Maestros</h3>
+        </div>
+        <div class="card-body">
+            <form action="/schedule/teacher" method="POST">
+
+                <div class="form-group">
+                    <select class="custom-select" name="title" id="validationDefault" value="{{title}}" required>
+                        <option selected disabled value="">Seleccionar</option>
+                        <option>MAESTRO</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" style="text-transform: uppercase;" name="Tname" class="form-control" placeholder="Nombre" required>
+                </div>
+{{!-- 
+                <div class="form-group">
+                    <input type="number" name="Ttotal" class="form-control" placeholder="Total de maestros" required>
+                </div> --}}
+
+                <div class="form-group">
+                    <input type="number" name="TworkWeek" class="form-control"
+                        placeholder="Total de horas que debe laborar por semana" required>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-outline-info btn-block" type="submit">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

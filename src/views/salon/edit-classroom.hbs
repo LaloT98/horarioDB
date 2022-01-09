@@ -1,0 +1,37 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar</h3>
+        </div>
+        <div class="card-body">
+            <form action="/schedule/edit-classroom/{{CLASSROOM._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+
+                {{!-- <div class="form-group">
+                    <input type="number" name="Ctotal" class="form-control" placeholder="" value="{{CLASSROOM.Ctotal}}">
+                </div> --}}
+
+                <div class="form-group">
+                    <select class="custom-select" name="Ctype" id="validationDefault" value="{{CLASSROOM.Ctype}}"
+                        required>
+                        <option selected disabled value="">Tipo de salon</option>
+                        <option>NORMAL</option>
+                        <option>AUDIOVISUAL</option>
+                        <option>TALLER</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="Ccapacity" class="form-control" placeholder=""
+                        value="{{CLASSROOM.Ccapacity}}">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar Cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

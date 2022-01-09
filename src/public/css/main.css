@@ -1,0 +1,28 @@
+/* * {
+  border: 1px solid rgb(255, 255, 255);
+} */
+
+body {
+  background: #283048;
+  background: -webkit-linear-gradient(to right, #859398, #283048);
+  background: linear-gradient(to right, #859398, #283048);
+}
+.Espacio {
+  margin-top:1em;
+}
+.logo {
+  width: 90%;
+}
+.logo2 {
+  width: 40%;
+}
+
+.PaginaPrincipal {
+  color: rgb(255, 255, 255);
+  background-color: rgb(85, 77, 77);
+  margin: 10%;
+}
+
+#letraTabla{
+  color: black;
+}

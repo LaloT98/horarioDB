@@ -1,0 +1,37 @@
+<div class="col-md-6 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Datos de los Salones de clases</h3>
+        </div>
+        <div class="card-body">
+            <form action="/schedule/classroom" method="POST">
+
+                <div class="form-group">
+                    <select class="custom-select" name="title" id="validationDefault" value="{{title}}" required>
+                        <option selected disabled value="">Seleccionar</option>
+                        <option>SALON</option>
+                    </select>
+                </div>
+
+                {{!-- <div class="form-group">
+                    <input type="number" name="Ctotal" class="form-control" placeholder="Total de Salones Disponibles"
+                        required autofocus>
+                </div> --}}
+                <div class="form-group">
+                    <select class="custom-select" name="Ctype" id="validationDefault" value="{{Ctype}}" required>
+                        <option selected disabled value="">Tipo de salon</option>
+                        <option>NORMAL</option>
+                        <option>AUDIOVISUAL</option>
+                        <option>TALLER</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="Ccapacity" class="form-control" placeholder="Capacidad por salon" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-info btn-block" type="submit">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

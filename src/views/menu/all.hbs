@@ -1,0 +1,140 @@
+<div class="card">
+    <div class="card-header"><i class="fad fa-cowbell-more"></i>
+        <h2>Maestros (Cantidad de registros: {{totalTeacher}})</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Horas que trabaja por semana</th>
+                    <th scope="col">ID</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light text-center" id="letraTabla">
+                {{#each Teacher}}
+                <tr>
+                    <th scope="row">{{Tname}}</th>
+                    <th scope="row">{{TworkWeek}}</th>
+                    <td>{{_id}}</td>
+                </tr>
+                {{else}}
+                <th scope="row"> </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="card">
+    <div class="card-header"><i class="fad fa-cowbell-more"></i>
+        <h2>Estudiantes (Cantidad de registros: {{totalStudent}})</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Total</th>
+                    <th scope="col">ID</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light text-center" id="letraTabla">
+                {{#each Student}}
+                <tr>
+                    <th scope="row">{{Stotal}}</th>
+                    <td>{{_id}}</td>
+                </tr>
+                {{else}}
+                <th scope="row"> </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="card">
+    <div class="card-header"><i class="fad fa-cowbell-more"></i>
+        <h2>Salones (Cantidad de registros: {{totalClassroom}})</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Tipo de salon</th>
+                    <th scope="col">Capacidad</th>
+                    <th scope="col">ID</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light text-center" id="letraTabla">
+                {{#each Classroom}}
+                <tr>
+                    <th scope="row">{{Ctype}}</th>
+                    <th scope="row">{{Ccapacity}}</th>
+                    <td>{{_id}}</td>
+                </tr>
+                {{else}}
+                <th scope="row"> </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-header"><i class="fad fa-cowbell-more"></i>
+        <h2>Materias (Cantidad de registros: {{totalMateria}})</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-dark table-info">
+            <thead class="text-center">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Hora ideal</th>
+                    <th scope="col">Maximo por dia</th>
+                    <th scope="col">Maximo a la semana</th>
+                    <th scope="col">ID</th>
+                </tr>
+            </thead>
+
+            <tbody class="table-light text-center" id="letraTabla">
+                {{#each Materia}}
+                <tr>
+                    <th scope="row">{{Mname}}</th>
+                    <th scope="row">{{MidealHours}}</th>
+                    <th scope="row">{{MmaxTimeDay}}</th>
+                    <th scope="row">{{MHoursWeek}}</th>
+                    <td>{{_id}}</td>
+                </tr>
+                {{else}}
+                <th scope="row"> </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
