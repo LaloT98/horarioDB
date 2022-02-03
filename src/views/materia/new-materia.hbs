@@ -9,33 +9,28 @@
                 <div class="form-group">
                     <select class="custom-select" name="title" id="validationDefault" value="{{title}}" required>
                         <option selected disabled value="">Seleccionar</option>
-                        <option>MATERIA</option>
+                        <option>MATERIA</option> 
                     </select>
                 </div>
-
+                {{!-- MATERIA --}}
                 <div class="form-group">
-                    <input type="text" style="text-transform: uppercase;" name="Mname" class="form-control" placeholder="Nombre" required>
+                    <input type="number" name="IDmateria" class="form-control" placeholder="ID de la Materia" required>
+                </div>
+                {{!-- CARRERA --}}
+                <div class="form-group">
+                    <input type="number" name="carrera" class="form-control" placeholder="ID de la Carrera" required>
                 </div>
 
-                {{!-- <div class="form-group">
-                    <input type="number" name="Mtotal" class="form-control" placeholder="Numero total de materias"
-                        required>
-                </div> --}}
-
+                {{!-- Hora minima --}}
                 <div class="form-group">
-                    <input type="number" name="MidealHours" class="form-control"
-                        placeholder="Hora ideal para impartir la clase" required>
+                    <input type="number" name="hrsMin" class="form-control" placeholder="Hora minima por dia" required>
                 </div>
 
+                {{!-- Hora maxima --}}
                 <div class="form-group">
-                    <input type="number" name="MmaxTimeDay" class="form-control" placeholder="Maximo de horas al dia"
-                        required>
+                    <input type="number" name="hrsMax" class="form-control" placeholder="Hora maxima por semana" required>
                 </div>
 
-                <div class="form-group">
-                    <input type="number" name="MHoursWeek" class="form-control"
-                        placeholder="Horas maximas a la semana por materia" required>
-                </div>
 
                 <div class="form-group">
                     <button class="btn btn-outline-info btn-block" type="submit">Guardar</button>

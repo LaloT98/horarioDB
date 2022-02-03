@@ -3,35 +3,36 @@ const path = require('path');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
-const session = require('express-session'); 
+const session = require('express-session');
 const flash = require("connect-flash");
 const passport = require('passport');
 
 //Inicializaciones
 const app = express();
 require('./database');
+//require("./ejecutar")
 require('./config/passport');
 
+
 //Configuraciones
-app.use(morgan("dev"))
-app.set('port', process.env.PORT || 4000);
+// app.use(morgan("dev"))
+app.set('port', process.env.PORT || 4005);
 app.set("views", path.join(__dirname, "views"));
-app.engine(".hbs", exphbs.engine({ 
-    defaultLayout: "main", 
+app.engine(".hbs", exphbs.engine({
+    defaultLayout: "main",
     layoutsDir: path.join(app.get("views"), "layouts"),
     partialsDir: path.join(app.get("views"), "partials"),
-    extname: ".hbs",                                   
-})
-);
+    extname: ".hbs",
+}));
 app.set("view engine", ".hbs");
 
 //Funciones ejecutadas antes que llegen al servidor
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(session({
-    secret : 'mysecretapp',
-    resave : true,
-    saveUninitialized : true
+    secret: 'mysecretapp',
+    resave: true,
+    saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -64,6 +65,6 @@ app.use(require('./routes/mainMenu'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //inicar servidor o servidor escuchando
-app.listen(app.get('port'), () =>{
+app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));
 });

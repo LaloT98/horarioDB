@@ -1,36 +1,30 @@
 <div class="col-md-4 mx-auto">
     <div class="card">
         <div class="card-header">
-            <h3>Editar</h3>
+            <h3>Editar Materia</h3>
         </div>
         <div class="card-body">
             <form action="/schedule/edit-materia/{{MATERIA._id}}?_method=PUT" method="POST">
                 <input type="hidden" name="_method" value="PUT">
 
                 <div class="form-group">
-                    <input type="text" style="text-transform: uppercase;" name="Mname" class="form-control" placeholder="Total de estudiantes"
-                        value="{{MATERIA.Mname}}">
+                    <input type="number" name="IDmateria" class="form-control" placeholder="ID materia"
+                        value="{{MATERIA.IDmateria}}">
                 </div>
-
-                {{!-- <div class="form-group">
-                    <input type="number" name="Mtotal" class="form-control" placeholder="Total de estudiantes"
-                        value="{{MATERIA.Mtotal}}">
-                </div> --}}
-
                 <div class="form-group">
-                    <input type="number" name="MidealHours" class="form-control" placeholder="Total de estudiantes"
-                        value="{{MATERIA.MidealHours}}">
+                    <input type="number" name="carrera" class="form-control" placeholder="ID carrera"
+                        value="{{MATERIA.carrera}}">
                 </div>
 
                 <div class="form-group">
-                    <input type="number" name="MmaxTimeDay" class="form-control" placeholder="Total de estudiantes"
-                        value="{{MATERIA.MmaxTimeDay}}">
+                    <input type="number" name="hrsMin" class="form-control" placeholder="Hora minina"
+                        value="{{MATERIA.hrsMin}}">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="hrsMax" class="form-control" placeholder="Hora maxima"
+                        value="{{MATERIA.hrsMax}}">
                 </div>
 
-                <div class="form-group">
-                    <input type="number" name="MHoursWeek" class="form-control" placeholder="Total de estudiantes"
-                        value="{{MATERIA.MHoursWeek}}">
-                </div>
                 
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">

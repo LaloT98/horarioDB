@@ -9,17 +9,25 @@ const SchoolSchema = new Schema({
     Stitle: { type: String },
     Stotal: { type: String },
     // Maestros
-    Ttitle: { type: String},
-    Tname: { type: String},
-    Ttotal: { type: String},
-    TworkWeek: { type: String},
+    Ttitle: { type: String },
+    Tname: { type: String },
+    Ttotal: { type: String },
+    TworkWeek: { type: String },
     //Materia
     Mtitle: { type: String },
-    Mname: { type: String},
+    Mname: { type: String },
     Mtotal: { type: String },
     MidealHours: { type: String },
-    MmaxTimeDay: { type: String},
+    MmaxTimeDay: { type: String },
     MHoursWeek: { type: String },
+    /////////////////segundo intento
+    IDmateria: { type: String },
+    carrera: { type: String },
+    hrsMin: { type: String },
+    hrsMax: { type: String },
+    puntos: { type: String },
+    peso: { type: String },
+    array: { type: Array },
     //Salon
     Ctitle: { type: String },
     Ctotal: { type: String },
@@ -27,7 +35,9 @@ const SchoolSchema = new Schema({
     Ccapacity: { type: String },
 
 
-    date: { type: Date, default: Date.now },
-    user: { type: String }
+
+
+    user: { type: String },
+    // date: { type: Date, default: Date.now }
 })
-module.exports = mongoose.model('escuela', SchoolSchema);
+module.exports = mongoose.model('escuela2', SchoolSchema);
